@@ -19,10 +19,10 @@ int main(void) {
     assert(IsEmpty("hola") == 0);
 
     /* ── GetLength — descomentar cuando implementes la funcion ──────────── */
-    /* assert(GetLength("") == 0); */
-    /* assert(GetLength("a") == 1); */
-    /* assert(GetLength("hola") == 4); */
-    /* assert(GetLength("hola mundo") == 10); */
+    assert(GetLength("") == 0); 
+    assert(GetLength("a") == 1);
+    assert(GetLength("hola") == 4); 
+    assert(GetLength("hola mundo") == 10);
 
     /* ── AreEqual — tiene un bug, estos tests ya estan activos ──────────── */
     assert(AreEqual("", "") == 1);
@@ -38,9 +38,12 @@ int main(void) {
     assert(AreDecimalDigits("") == 0);
 
     /* ── Contains — descomentar cuando implementes la funcion ───────────── */
-    /* assert(Contains("hola", 'o') == 1); */
-    /* assert(Contains("hola", 'z') == 0); */
-    /* assert(Contains("", 'a') == 0); */
+    assert(Contains("hola", 'o') == 1);       // Carácter presente
+    assert(Contains("hola", 'z') == 0);       // Carácter ausente
+    assert(Contains("", 'a') == 0);           // Caso borde: string vacío
+    assert(Contains("a", 'a') == 1);
 
+
+    
     return 0;
 }
